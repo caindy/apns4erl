@@ -84,12 +84,12 @@ connect(Name, ErrorFun, FeedbackFun) ->
 %% @doc Closes an open connection
 -spec disconnect(conn_id()) -> ok.
 disconnect(ConnId) ->
-  apns_connection:stop(ConnId).
+  apns_conn:stop(ConnId).
 
 %% @doc Sends a message to Apple
 -spec send_message(conn_id(), #apns_msg{}) -> ok.
 send_message(ConnId, Msg) ->
-  apns_connection:send_message(ConnId, Msg).
+  apns_conn:send_message(ConnId, Msg).
 
 %% @doc Sends a message to Apple with content_available: 1
 -spec send_content_available(conn_id(), string()) -> ok.

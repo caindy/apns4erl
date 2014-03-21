@@ -4,7 +4,7 @@
 %%% @doc apns4erl connection process
 %%% @end
 %%%-------------------------------------------------------------------
--module(apns_connection).
+-module(apns_conn).
 -author('Fernando Benavides <fernando.benavides@inakanetworks.com>').
 
 -behaviour(gen_server).
